@@ -10,10 +10,10 @@ const useSelect = (stateInicial, opciones) => {
     <select
       className="browser-default"
       value={state}
-      onChange={e => setState(e.target.value)}
+      onChange={(e) => setState(e.target.value)}
     >
-      {opciones.map(opcion => (
       <option value="">-- Seleccione --</option>
+      {opciones.map((opcion) => (
         <option key={opcion.value} value={opcion.value}>
           {opcion.label}
         </option>
@@ -27,7 +27,7 @@ const useSelect = (stateInicial, opciones) => {
 
 useSelect.propTypes = {
   stateInicial: PropTypes.string.isRequired,
-  opciones: PropTypes.object.isRequired
+  opciones: PropTypes.object.isRequired,
 };
 
 export default useSelect;
